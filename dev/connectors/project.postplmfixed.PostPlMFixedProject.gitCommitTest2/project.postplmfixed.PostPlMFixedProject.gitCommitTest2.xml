@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<rest-connector xmlns="http://www.webmethods.com/cloudstreams/metadata/handler/model" id="project.postplmfixed.PostPlMFixedProject.gitCommitTest2" version="1.0" name="gitCommitTest2" displayName="gitCommitTest2">
+    <connections>
+        <connection type="sagcloud" name="gitCommitTest2connection" displayName="gitCommitTest2connection">
+            <groups>
+                <group type="connection" name="connection" displayName="Connection">
+                    <description>Define the required connection configurations to initiate communication with the SaaS provider.</description>
+                    <fields>
+                        <field isRequired="false" isEncrypted="false" isHidden="false" isArray="false" defaultValue="https://api.uber.com/v1" name="cn.providerUrl" displayName="Server URL">
+                            <description>The native provider endpoint target for the connection configuration</description>
+                        </field>
+                    </fields>
+                </group>
+                <group type="credentials" name="credentials" displayName="Credentials">
+                    <fields/>
+                </group>
+            </groups>
+        </connection>
+    </connections>
+    <services>
+        <service xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="RESTServiceType" endpoint="${cn.providerUrl}" name="gitcommittest2service" displayName="gitcommittest2service">
+            <documentModel packageName="." nsName="project.postplmfixed.PostPlMFixedProject.gitCommitTest2.gitcommittest2service.doctypes" useInlineModel="false"/>
+            <resources>
+                <mappings>
+                    <map context="OUT" name="contentTypeHeader" displayName="Content-Type">
+                        <source type="LITERAL">application/json</source>
+                        <target type="HEADER">Content-Type</target>
+                    </map>
+                    <map context="IN" name="acceptHeader" displayName="Accept">
+                        <source type="LITERAL">application/json</source>
+                        <target type="HEADER">Accept</target>
+                    </map>
+                </mappings>
+                <resource method="GET" path="/me" type="SIMPLE" tag="User" name="getME" displayName="User Profile">
+                    <description>The User Profile endpoint returns information about the Uber user that has authorized with the application.</description>
+                    <mappings>
+                        <map isRequired="true" context="OUT" name="contentTypeHeader" displayName="Content-Type">
+                            <source type="LITERAL">application/json</source>
+                            <target type="HEADER">Content-Type</target>
+                        </map>
+                        <map isRequired="true" context="IN" name="acceptHeader" displayName="Accept">
+                            <source type="LITERAL">application/json</source>
+                            <target type="HEADER">Accept</target>
+                        </map>
+                    </mappings>
+                    <parameters/>
+                    <responses>
+                        <response name="get200meResponse" code="200" messageFormatterType="application/octet+idataoref" builderType="application/json" documentRef="project.postplmfixed.PostPlMFixedProject.gitCommitTest2.gitcommittest2service.doctypes:Profile" excludeRoot="true" dimension="0"/>
+                        <response name="getdefaultmeResponse" code="100-199,201-599" messageFormatterType="application/octet+idataoref" builderType="application/json" documentRef="project.postplmfixed.PostPlMFixedProject.gitCommitTest2.gitcommittest2service.doctypes:Error" excludeRoot="true" dimension="0"/>
+                    </responses>
+                </resource>
+                <resource method="GET" path="/estimates/time" type="SIMPLE" tag="Estimates" name="getTIME" displayName="Time Estimates">
+                    <description>The Time Estimates endpoint returns ETAs for all products offered at a given location, with the responses expressed as integers in seconds. We recommend that this endpoint be called every minute to provide the most accurate, up-to-date ETAs.</description>
+                    <mappings>
+                        <map isRequired="true" context="OUT" name="contentTypeHeader" displayName="Content-Type">
+                            <source type="LITERAL">application/json</source>
+                            <target type="HEADER">Content-Type</target>
+                        </map>
+                        <map isRequired="true" context="IN" name="acceptHeader" displayName="Accept">
+                            <source type="LITERAL">application/json</source>
+                            <target type="HEADER">Accept</target>
+                        </map>
+                    </mappings>
+                    <parameters>
+                        <parameter name="start_latitude" isRequired="true" style="QUERYSTRING_PARAM">
+                            <description>Latitude component of start location.</description>
+                        </parameter>
+                        <parameter name="start_longitude" isRequired="true" style="QUERYSTRING_PARAM">
+                            <description>Longitude component of start location.</description>
+                        </parameter>
+                        <parameter name="customer_uuid" style="QUERYSTRING_PARAM">
+                            <description>Unique customer identifier to be used for experience customization.</description>
+                        </parameter>
+                        <parameter name="product_id" style="QUERYSTRING_PARAM">
+                            <description>Unique identifier representing a specific product for a given latitude &amp; longitude.</description>
+                        </parameter>
+                    </parameters>
+                    <responses>
+                        <response name="get200timeResponse" code="200" messageFormatterType="application/octet+idataoref" builderType="application/json" documentRef="project.postplmfixed.PostPlMFixedProject.gitCommitTest2.gitcommittest2service.doctypes:Product" excludeRoot="true" dimension="1"/>
+                        <response name="getdefaulttimeResponse" code="100-199,201-599" messageFormatterType="application/octet+idataoref" builderType="application/json" documentRef="project.postplmfixed.PostPlMFixedProject.gitCommitTest2.gitcommittest2service.doctypes:Error" excludeRoot="true" dimension="0"/>
+                    </responses>
+                </resource>
+                <resource method="GET" path="/estimates/price" type="SIMPLE" tag="Estimates" name="getPRICE" displayName="null">
+                    <description>The Price Estimates endpoint returns an estimated price range for each product offered at a given location. The price estimate is provided as a formatted string with the full price range and the localized currency symbol.&lt;br&gt;&lt;br&gt;The response also includes low and high estimates, and the [ISO 4217](http://en.wikipedia.org/wiki/ISO_4217) currency code for situations requiring currency conversion. When surge is active for a particular product, its surge_multiplier will be greater than 1, but the price estimate already factors in this multiplier.</description>
+                    <mappings>
+                        <map isRequired="true" context="IN" name="headerExampleHeader" displayName="header_example">
+                            <description>sample example of header in open api 2.</description>
+                            <source type="LITERAL"/>
+                            <target type="HEADER">header_example</target>
+                        </map>
+                        <map isRequired="true" context="OUT" name="contentTypeHeader" displayName="Content-Type">
+                            <source type="LITERAL">application/json</source>
+                            <target type="HEADER">Content-Type</target>
+                        </map>
+                        <map isRequired="true" context="IN" name="acceptHeader" displayName="Accept">
+                            <source type="LITERAL">application/json</source>
+                            <target type="HEADER">Accept</target>
+                        </map>
+                    </mappings>
+                    <parameters>
+                        <parameter name="start_latitude" isRequired="true" style="QUERYSTRING_PARAM">
+                            <description>Latitude component of start location.</description>
+                        </parameter>
+                        <parameter name="start_longitude" isRequired="true" style="QUERYSTRING_PARAM">
+                            <description>Longitude component of start location.</description>
+                        </parameter>
+                        <parameter name="end_latitude" isRequired="true" style="QUERYSTRING_PARAM">
+                            <description>Latitude component of end location.</description>
+                        </parameter>
+                        <parameter name="end_longitude" isRequired="true" style="QUERYSTRING_PARAM">
+                            <description>Longitude component of end location.</description>
+                        </parameter>
+                    </parameters>
+                    <responses>
+                        <response name="get200priceResponse" code="200" messageFormatterType="application/octet+idataoref" builderType="application/json" documentRef="project.postplmfixed.PostPlMFixedProject.gitCommitTest2.gitcommittest2service.doctypes:PriceEstimate" excludeRoot="true" dimension="1"/>
+                        <response name="getdefaultpriceResponse" code="100-199,201-599" messageFormatterType="application/octet+idataoref" builderType="application/json" documentRef="project.postplmfixed.PostPlMFixedProject.gitCommitTest2.gitcommittest2service.doctypes:Error" excludeRoot="true" dimension="0"/>
+                    </responses>
+                </resource>
+                <resource method="GET" path="/history" type="SIMPLE" tag="User" name="getHISTORY" displayName="User Activity">
+                    <description>The User Activity endpoint returns data about a user's lifetime activity with Uber. The response will include pickup locations and times, dropoff locations and times, the distance of past requests, and information about which products were requested.&lt;br&gt;&lt;br&gt;The history array in the response will have a maximum length based on the limit parameter. The response value count may exceed limit, therefore subsequent API requests may be necessary.</description>
+                    <mappings>
+                        <map isRequired="true" context="OUT" name="contentTypeHeader" displayName="Content-Type">
+                            <source type="LITERAL">application/json</source>
+                            <target type="HEADER">Content-Type</target>
+                        </map>
+                        <map isRequired="true" context="IN" name="acceptHeader" displayName="Accept">
+                            <source type="LITERAL">application/json</source>
+                            <target type="HEADER">Accept</target>
+                        </map>
+                    </mappings>
+                    <parameters>
+                        <parameter name="offset" style="QUERYSTRING_PARAM">
+                            <description>Offset the list of returned results by this amount. Default is zero.</description>
+                        </parameter>
+                        <parameter name="limit" style="QUERYSTRING_PARAM">
+                            <description>Number of items to retrieve. Default is 5, maximum is 100.</description>
+                        </parameter>
+                    </parameters>
+                    <responses>
+                        <response name="get200historyResponse" code="200" messageFormatterType="application/octet+idataoref" builderType="application/json" documentRef="project.postplmfixed.PostPlMFixedProject.gitCommitTest2.gitcommittest2service.doctypes:Activities" excludeRoot="true" dimension="0"/>
+                        <response name="getdefaulthistoryResponse" code="100-199,201-599" messageFormatterType="application/octet+idataoref" builderType="application/json" documentRef="project.postplmfixed.PostPlMFixedProject.gitCommitTest2.gitcommittest2service.doctypes:Error" excludeRoot="true" dimension="0"/>
+                    </responses>
+                </resource>
+            </resources>
+        </service>
+    </services>
+</rest-connector>
