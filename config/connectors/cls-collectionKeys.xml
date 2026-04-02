@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<services>
+    <cloudstreamsCollectionKeys serviceName="WmCloudStreams.RestVS">
+        <servicesKeys>
+            <keyDetails collectionKey="project.postplmfixed.PostPlMFixedProject.project_postplmfixed_PostPlMFixedProject_AmkuTest.operations.actions:getHISTORY" connectorServiceName="project.postplmfixed.PostPlMFixedProject.project_postplmfixed_PostPlMFixedProject_AmkuTest.operations.actions:getHISTORY"/>
+            <keyDetails collectionKey="project.postplmfixed.PostPlMFixedProject.project_postplmfixed_PostPlMFixedProject_AmkuTest.operations.actions:getME" connectorServiceName="project.postplmfixed.PostPlMFixedProject.project_postplmfixed_PostPlMFixedProject_AmkuTest.operations.actions:getME"/>
+            <keyDetails collectionKey="project.postplmfixed.PostPlMFixedProject.project_postplmfixed_PostPlMFixedProject_AmkuTest.operations.actions:getPRICE" connectorServiceName="project.postplmfixed.PostPlMFixedProject.project_postplmfixed_PostPlMFixedProject_AmkuTest.operations.actions:getPRICE"/>
+            <keyDetails collectionKey="project.postplmfixed.PostPlMFixedProject.project_postplmfixed_PostPlMFixedProject_AmkuTest.operations.actions:getTIME" connectorServiceName="project.postplmfixed.PostPlMFixedProject.project_postplmfixed_PostPlMFixedProject_AmkuTest.operations.actions:getTIME"/>
+        </servicesKeys>
+    </cloudstreamsCollectionKeys>
+</services>
