@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<FLOW VERSION="3.2" CLEANUP="false">
+<FLOW VERSION="3.2" CLEANUP="true">
   <COMMENT></COMMENT>
 
   <!-- nodes -->
 
 <INVOKE NAME="Utils" SERVICE="pub.utils:deepClone">
   <COMMENT></COMMENT>
+</INVOKE>
+
+<INVOKE NAME="Utils" SERVICE="pub.utils:deepClone">
 </INVOKE>
 </FLOW>
