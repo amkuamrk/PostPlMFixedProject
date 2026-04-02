@@ -1,0 +1,18 @@
+Manifest-Version: 1.0
+Connector-Key: project.postplmfixed.PostPlMFixedProject.fileCommitTest
+Connector-Name: fileCommitTest
+Connector-Version: 1.0
+Connector-Handler: com.webmethods.cloudstreams.metadata.handler.rest.Res
+ tConnectorMetadataHandler
+Connector-State: Enabled
+Connector-Bundle-Vendor: IBM
+Connector-Bundle-Version: 1.0
+Connector-Group-ID: project.postplmfixed.PostPlMFixedProject.fileCommitT
+ est
+Connector-Group-Version: 1.0
+Project: 
+
+Name: User-Defined
+Application-Version: 2.0
+applicationImageID: 
+
