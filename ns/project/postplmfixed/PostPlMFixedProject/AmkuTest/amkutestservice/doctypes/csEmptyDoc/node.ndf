@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Values version="2.0">
+  <record name="record" javaclass="com.wm.util.Values">
+    <value name="node_nsName">project.postplmfixed.PostPlMFixedProject.AmkuTest.amkutestservice.doctypes:csEmptyDoc</value>
+    <value name="node_pkg">PostPlMFixedProject</value>
+    <value name="node_type">record</value>
+    <value name="field_type">record</value>
+  </record>
+</Values>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Values version="2.0">
+  <value name="node_type">service</value>
+  <value name="node_subtype">unknown</value>
+  <value name="node_nsName">wm.cloudstreams.postplmfixed.PostPlMFixedProject.plm:registerProvider</value>
+  <value name="node_pkg">PostPlMFixedProject</value>
+  <value name="is_public">false</value>
+  <value name="svc_type">flow</value>
+  <value name="svc_subtype">unknown</value>
+  <null name="svc_sig"/>
+  <value name="svc_sigtype">unknown</value>
+  <number name="pipeline_option" type="Integer">0</number>
+  <value name="icontext_policy">$null</value>
+  <value name="auditoption">0</value>
+  <record name="auditsettings" javaclass="com.wm.util.Values">
+    <value name="document_data">0</value>
+    <value name="startExecution">false</value>
+    <value name="stopExecution">false</value>
+    <value name="onError">true</value>
+  </record>
+  <value name="modifiable">true</value>
+  <record name="flow" javaclass="com.wm.util.Values">
+    <value name="type">ROOT</value>
+    <list name="nodes">
+      <record javaclass="com.wm.util.Values">
+        <value name="type">MAP</value>
+        <list name="nodes">
+          <record javaclass="com.wm.util.Values">
+            <value name="type">MAPSET</value>
+            <value name="label">Setter</value>
+            <value name="field">/projectAlias;1;0</value>
+            <value name="d_enc">XMLValues</value>
+            <value name="overwrite">true</value>
+            <value name="variables">false</value>
+            <value name="globalVariables">false</value>
+            <value name="data">
+
+&lt;Values version="2.0"&gt;
+  &lt;value name="xml"&gt;postplmfixed&lt;/value&gt;
+&lt;/Values&gt;
+</value>
+            <value name="mapseti18n">true</value>
+          </record>
+          <record javaclass="com.wm.util.Values">
+            <value name="type">MAPSET</value>
+            <value name="label">Setter</value>
+            <value name="field">/providerDisplayName;1;0</value>
+            <value name="d_enc">XMLValues</value>
+            <value name="overwrite">true</value>
+            <value name="variables">false</value>
+            <value name="globalVariables">false</value>
+            <value name="data">
+
+&lt;Values version="2.0"&gt;
+  &lt;value name="xml"&gt;PostPlMFixedProject&lt;/value&gt;
+&lt;/Values&gt;
+</value>
+            <value name="mapseti18n">true</value>
+          </record>
+          <record javaclass="com.wm.util.Values">
+            <value name="type">MAPSET</value>
+            <value name="label">Setter</value>
+            <value name="field">/providerName;1;0</value>
+            <value name="d_enc">XMLValues</value>
+            <value name="overwrite">true</value>
+            <value name="variables">false</value>
+            <value name="globalVariables">false</value>
+            <value name="data">
+
+&lt;Values version="2.0"&gt;
+  &lt;value name="xml"&gt;PostPlMFixedProject&lt;/value&gt;
+&lt;/Values&gt;
+</value>
+            <value name="mapseti18n">true</value>
+          </record>
+        </list>
+        <value name="mode">STANDALONE</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="type">INVOKE</value>
+        <value name="service">wm.cloudstreams.provider.lifecycle.bootstrap:registerProvider</value>
+      </record>
+    </list>
+    <value name="version">3.2</value>
+    <value name="cleanup">true</value>
+  </record>
+  <null name="parentWsd"/>
+</Values>
