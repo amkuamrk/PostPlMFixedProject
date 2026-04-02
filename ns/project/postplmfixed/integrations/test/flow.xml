@@ -11,4 +11,8 @@
 
 <INVOKE NAME="Utils" SERVICE="pub.utils:deepClone">
 </INVOKE>
+
+<INVOKE NAME="Utils" SERVICE="pub.utils:deepClone">
+  <COMMENT></COMMENT>
+</INVOKE>
 </FLOW>
