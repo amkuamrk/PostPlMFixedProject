@@ -6,21 +6,28 @@
   <value name="system_package">no</value>
   <value name="version">1.0</value>
   <value name="name">PostPlMFixedProject</value>
-  <null name="startup_services"/>
-  <null name="shutdown_services"/>
+  <record name="startup_services" javaclass="com.wm.util.Values">
+    <null name="wm.cloudstreams.postplmfixed.PostPlMFixedProject.plm:registerProvider"/>
+  </record>
+  <record name="shutdown_services" javaclass="com.wm.util.Values">
+    <null name="wm.cloudstreams.postplmfixed.PostPlMFixedProject.plm:unregisterProvider"/>
+  </record>
   <null name="replication_services"/>
-  <null name="requires"/>
+  <record name="requires" javaclass="com.wm.util.Values">
+    <value name="WmCloudStreams">12.1.0</value>
+  </record>
   <null name="lazy_load_node_types"/>
   <null name="listACL"/>
   <value name="webappLoad">yes</value>
   <value name="reloadWithDependentPackage">yes</value>
-  <value name="build">2</value>
+  <value name="build">3</value>
   <null name="description"/>
   <value name="created_date">02-04-2026 06:50:45 GMT</value>
   <null name="extendedProperties"/>
   <null name="target_server_version"/>
   <value name="isProjectPackage">true</value>
-  <value name="lastUpdated">2026-04-02T06:50:50.26526362Z</value>
+  <value name="lastUpdated">2026-04-02T06:52:35.088852555Z</value>
   <value name="wmProjectId">flb1b703e2844943fc89deff48f4f68cd5</value>
   <value name="creator">CloudStreams Administrator</value>
+  <null name="publisher"/>
 </Values>
