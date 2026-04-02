@@ -1,0 +1,18 @@
+Manifest-Version: 1.0
+Connector-Key: project.postplmfixed.PostPlMFixedProject.AmkuTest1234
+Connector-Name: AmkuTest1234
+Connector-Version: 1.0
+Connector-Handler: com.webmethods.cloudstreams.metadata.handler.rest.Res
+ tConnectorMetadataHandler
+Connector-State: Enabled
+Connector-Bundle-Vendor: IBM
+Connector-Bundle-Version: 1.0
+Connector-Group-ID: project.postplmfixed.PostPlMFixedProject.AmkuTest123
+ 4
+Connector-Group-Version: 1.0
+Project: 
+
+Name: User-Defined
+Application-Version: 2.0
+applicationImageID: 
+
